@@ -1,0 +1,30 @@
+.buttonSection {
+  display: flex;
+  margin: 20px;
+  .buttonElement {
+    margin-right: 20px;
+    width: 70px;
+    height: 66px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #32334A;
+    background: #191A29;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  .buttonIcon{
+    margin-top: 8px;
+    margin-left: 19px;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  .buttonText {
+    color: #9499C3;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 12px */
+    padding-bottom: 8px;
+  }
+}
