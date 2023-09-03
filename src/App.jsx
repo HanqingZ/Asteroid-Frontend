@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home'
+import Map from './pages/Map'
 import Miners from './pages/Miners'
 import Asteroids from './pages/Asteroids'
 import Planets from './pages/Planets'
@@ -11,13 +11,18 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <ButtonSection />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/miners' element={<Miners />} />
-        <Route path='/asteroids' element={<Asteroids />} />
-        <Route path='/planets' element={<Planets />} />
-      </Routes>
+      <div className="DetailPage" >
+        <ButtonSection />
+        <Routes>
+          <Route path='/' element={<Miners />} />
+          <Route path='/miners' element={<Miners />} />
+          <Route path='/asteroids' element={<Asteroids />} />
+          <Route path='/planets' element={<Planets />} />
+        </Routes>
+      </div>
+      <div className="MapSide" >
+        <Map />
+      </div>
     </div>
   );
 }

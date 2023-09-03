@@ -1,42 +1,47 @@
-import React from "react"
-import { NavLink } from 'react-router-dom'
-import { getAsteroid } from "../server/api/asteroid"
-import { getMiner } from "../server/api/miner"
-import { getPlanet } from "../server/api/planet"
+import React, { useState, useEffect } from "react"
+import { NavLink, useLocation } from 'react-router-dom'
 import './ButtonSection.scss'
 
-const ButtonSection = () => {
+const ButtonSection = ({ navigation }) => {
+  const location = useLocation();
+  console.log(location.pathname);
 
-  const typeOfSelected = [
+  const [selectedIcon, setSelectedIcon] = useState('miners');
+
+  useEffect(() => {
+    setSelectedIcon(location.pathname)
+  }, [location.pathname])
+  
+
+  const  buttonList = [
     {
       name: 'Miners',
       type: 'miners',
-      icon: <img src='/icons/miner.svg' alt="" />,
-      onClick: getMiner,
+      icon: '/icons/miner.svg',
       path: '/miners'
     },
     {
       name: 'Asteroids',
       type: 'asteroids',
-      icon: <img src='/icons/asteroid.svg' alt="" />,
-      onClick: getAsteroid,
+      icon: '/icons/asteroid.svg',
       path: '/asteroids'
     },
     {
       name: 'Planets',
       type: 'planets',
-      icon: <img src='/icons/planet.svg' alt="" />,
-      onClick: getPlanet,
+      icon: '/icons/planet.svg',
       path: '/planets'
     },
   ];
   
   return (
     <div className="buttonSection">
-      {typeOfSelected.map((element) =>
-        <NavLink className="buttonElement" to={element.path}>
-          <div className="buttonIcon">{element.icon}</div>
-          <p class="buttonText">{element.name}</p>
+      { buttonList.map((element) =>
+        <NavLink className="buttonElement" to={element.path} key={element.name} style={element.path === selectedIcon ? {} : {border: "none"}}>
+          <div className="buttonIcon">
+            <img className={element.path === selectedIcon ? "buttonGreen" : ""} src={element.icon} alt={element.type} />
+          </div>
+          <p className="buttonText">{element.name}</p>
         </NavLink>
       )}
     </div>

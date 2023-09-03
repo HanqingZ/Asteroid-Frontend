@@ -10,6 +10,7 @@
     border: 1px solid #32334A;
     background: #191A29;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-decoration: none
   }
   .buttonIcon{
     margin-top: 8px;
@@ -27,4 +28,8 @@
     line-height: 100%; /* 12px */
     padding-bottom: 8px;
   }
+  .buttonGreen {
+    filter: invert(66%) sepia(39%) saturate(6534%) hue-rotate(157deg) brightness(89%) contrast(101%)
+  }
+
 }

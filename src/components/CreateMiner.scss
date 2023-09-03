@@ -1,0 +1,57 @@
+.assignZone {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  color: #FFF;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.inputName {
+  text-align: left;
+  color: #9499C3;
+  font-family: Lato;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 11px;
+}
+
+.inputbox {
+  border-radius: 4px;
+  border: 1px solid #1A1C31;
+  background: #242538;
+  color: #FFF
+}
+
+.MuiInputBase-root {
+  background: #242538;
+  color: #FFF
+}
+
+.largeInput {
+  width: 399px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.smallInput {
+  width: 125px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.saveButton {
+  margin: 32px auto;
+  width: 91px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #E1E2EF;
+}
