@@ -5,7 +5,7 @@ export const getAsteroid = async () => {
     const response = await axios.get("/asteroids")
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
@@ -14,7 +14,7 @@ export const getOneAsteroid = async ({asteroidId}) => {
     const response = await axios.get(`/asteroids/${asteroidId}`)
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
@@ -28,7 +28,7 @@ export const createAsteroid = async () => {
     })
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
@@ -42,7 +42,7 @@ export const updateAsteroid = async ({asteroidId}) => {
   })
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
@@ -51,6 +51,6 @@ export const deleteAsteroid = async ({asteroidId}) => {
     const response = await axios.delete(`/asteroids/${asteroidId}`)
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }

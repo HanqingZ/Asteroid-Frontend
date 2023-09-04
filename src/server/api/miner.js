@@ -14,7 +14,7 @@ export const getMinerByPlanet = async ({planetId}) => {
     const response = await axios.get(`/miners?planetId=${planetId}`)
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
@@ -23,7 +23,7 @@ export const getOneMiner = async ({minerId}) => {
     const response = await axios.get(`/miners/${minerId}`)
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 

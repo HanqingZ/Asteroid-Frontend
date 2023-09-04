@@ -14,7 +14,7 @@ export const getHistoryOfMiner = async ({minerId}) => {
     const response = await axios.get(`/history?minerId=${minerId}`)
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
@@ -23,7 +23,7 @@ export const getOneHistory = async ({historyId}) => {
     const response = await axios.get(`/history/${historyId}`)
     return response.data
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 

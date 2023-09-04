@@ -4,7 +4,6 @@ import './ButtonSection.scss'
 
 const ButtonSection = ({ navigation }) => {
   const location = useLocation();
-  console.log(location.pathname);
 
   const [selectedIcon, setSelectedIcon] = useState('miners');
 

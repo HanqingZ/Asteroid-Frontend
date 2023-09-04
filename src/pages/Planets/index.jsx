@@ -24,7 +24,6 @@ const Planets = () => {
   })
   
   const handleCreate = (planetInfo) => {
-    console.log(planetInfo);
     createMiner(planetInfo)
   }
 
@@ -61,6 +60,11 @@ const Planets = () => {
         style={{color: "#9499C3", border: "none", borderColor: "#9499C3"}}
         rows={planetInfo}
         columns={minerTableColoums}
+        initialState={{
+          pagination: {
+            paginationModel: { page: 0, pageSize: 10 },
+          },
+        }}
       />
       {showPopup &&
         <Popup setShowPopup={setShowPopup} >
